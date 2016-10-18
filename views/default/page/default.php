@@ -16,7 +16,6 @@
 
 $messages = elgg_view('page/elements/messages', array('object' => $vars['sysmessages']));
 
-$header = elgg_view('page/elements/header', $vars);
 $navbar = elgg_view('page/elements/navbar', $vars);
 $content = elgg_view('page/elements/body', $vars);
 $footer = elgg_view('page/elements/footer', $vars);
