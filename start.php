@@ -80,6 +80,12 @@ function theme_sbw_iconized_menu($hook, $type, $items, $params) {
 		$item->setText(elgg_view_icon($icon_name) . $item->getText());
 	}
 
+	$items[] = ElggMenuItem::factory(array(
+		'name' => 'marketplace',
+		'text' => elgg_view_icon('leaf') . 'Marketplace',
+		'href' => 'https://shop.socialbusinessworld.org',
+	));
+
 	return $items;
 }
 
