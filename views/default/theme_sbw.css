@@ -35,6 +35,11 @@ body {
 	display: block;
 }
 
+.elgg-page-footer .elgg-module-aside {
+	text-align: center;
+	clear: both;
+}
+
 @media (max-width: 820px) {
 	/* Float to left instead of centering */
 	#site-logo {
