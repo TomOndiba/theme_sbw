@@ -46,6 +46,9 @@ function theme_sbw_init() {
 	elgg_register_plugin_hook_handler('register', 'menu:site', 'theme_sbw_iconized_menu');
 
 	elgg_unregister_menu_item('footer', 'powered');
+
+	// HTML email handler
+	elgg_extend_view('plugins/html_email_handler/settings', 'html_email_handler/settings');
 }
 
 /**
