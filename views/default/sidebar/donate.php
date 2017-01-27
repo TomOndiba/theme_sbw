@@ -1,7 +1,7 @@
 <?php
 
-$content = '<p>We rely on your <a href="https://shop.socialbusinessworld.org/en/13-ethical-products-entire-catalogue">ETHICAL SHOPPING</a>
-at our Marketplace and your DONATIONS via <a href="https://www.paypal.me/socialbusinessworld">Paypal</a> or <a href="https://tag.satispay.com/sbworld">via Satispay</a>.
+$content = '<p>We rely on your <a href="https://shop.socialbusinessworld.org/en/13-ethical-products-entire-catalogue" target="_blank">ETHICAL SHOPPING</a>
+at our Marketplace and your DONATIONS via <a href="https://www.paypal.me/socialbusinessworld" target="_blank">Paypal</a> or <a href="https://tag.satispay.com/sbworld" target="_blank">via Satispay</a>.
 
 See <a href="https://socialbusinessworld.org/groups/members/74795">latest Donators</a>.</p>
 

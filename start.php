@@ -88,6 +88,7 @@ function theme_sbw_iconized_menu($hook, $type, $items, $params) {
 		'name' => 'marketplace',
 		'text' => elgg_view_icon('leaf') . 'Marketplace',
 		'href' => 'https://shop.socialbusinessworld.org',
+		'target' => '_blank',
 	));
 
 	return $items;
