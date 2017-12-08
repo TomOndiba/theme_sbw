@@ -5,7 +5,7 @@ at our Marketplace and your DONATIONS via <a href="https://www.paypal.me/socialb
 
 See <a href="https://socialbusinessworld.org/groups/members/74795">latest Donators</a>.</p>
 
-<p><b>Via banktransfer to:</b> Social Business World - Ethic Bank (Banca Etica) - Branch: Ancona (Italy) - IBAN: IT90O0501802600000000151909 - BIC/SWIFT: CCRTIT2T84A</p>
+<p><b>Via banktransfer to:</b> Social Business World - Ethic Bank (Banca Etica) - Branch: Ancona (Italy) - IBAN: IT73B0501802600000011519097 - BIC/SWIFT: CCRTIT2T84A</p>
 
 <p>Consider supporting us now. Thank you!</p>';
 
