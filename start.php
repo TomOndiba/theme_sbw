@@ -76,6 +76,7 @@ function theme_sbw_iconized_menu($hook, $type, $items, $params) {
 		"translation_editor" => "language",
 		"dashboard" => "home",
 		"campaigns" => "handshake-o",
+		"projects" => "tasks",
 	);
 	$icon_name = "pippo"; //set a fake default
 	foreach ($items as $key => $item) {
