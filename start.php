@@ -29,6 +29,8 @@ function theme_sbw_init() {
 	}
 
 	elgg_register_page_handler('cover', 'theme_sbw_cover_page_handler');
+	elgg_register_page_handler('', 'theme_sbw_index_page_handler');
+
 	elgg_register_action("cover/upload", __DIR__ . "/actions/cover/upload.php");
 	elgg_register_action("cover/crop", __DIR__ . "/actions/cover/crop.php");
 	elgg_register_action("cover/remove", __DIR__ . "/actions/cover/remove.php");
@@ -291,3 +293,13 @@ function theme_sbw_owner_block_menu($hook, $type, $return, $params) {
     return $return;
 }
 
+/**
+ *
+ */
+function theme_sbw_index_page_handler($page) {
+	if (elgg_is_logged_in()) {
+		return false;
+	}
+
+	echo elgg_view('landing/index');
+}
