@@ -39,24 +39,7 @@
 						<li><a href="#"><img src="<?php echo elgg_get_simplecache_url("landing/images/flag-4.png"); ?>" alt="image"></a></li>
 						<li><a href="#"><img src="<?php echo elgg_get_simplecache_url("landing/images/flag-5.png"); ?>" alt="image"></a></li>
 					</ul>
-					<form class="login-area" action="#">
-						<div class="form-row">
-						<span class="label">Username or Email</span>
-						<input type="email">
-						<label class="control control--checkbox">
-						<input type="checkbox">
-							Remember Me
-							<span class="control__indicator"></span>
-						</label>
-						</div>
-						<div class="form-row">
-						<span class="label">Password</span>
-						<input type="password">
-						<a href="#">Forgot Password?</a>
-						</div>
-						<button type="submit">Sign in</button>
-
-					</form>
+					<?php echo elgg_view_form('login'); ?>
 					</div>
 					<button type="submit" class="mobile" data-toggle="modal" data-target="#myModal">Sign in</button>
 				</div>

@@ -17,7 +17,7 @@ body {
     margin: 0;
     color: #000;
     background: #fff;
-    font: 14px/1.25 'Open Sans' ,  sans-serif; 
+    font: 14px/1.25 'Open Sans' ,  sans-serif;
     min-width: 320px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: none;
@@ -90,23 +90,23 @@ input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder {
 	color:#999 !important;
 }
- 
+
 input[type="text"]::-moz-placeholder,
 input[type="tel"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder { /* Firefox 18- */
-	color:#999 !important;  
+	color:#999 !important;
 }
- 
+
 input[type="tel"]::-moz-placeholder,
 input[type="text"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
-	color: #999 !important;  
+	color: #999 !important;
 }
- 
+
 input[type="tel"]::-ms-input-placeholder,
 input[type="text"]::-ms-input-placeholder,
-input[type="email"]::-ms-input-placeholder {  
-	color:#999 !important; 
+input[type="email"]::-ms-input-placeholder {
+	color:#999 !important;
 }
 
 @font-face {
@@ -209,10 +209,10 @@ input[type="email"]::-ms-input-placeholder {
 #myModal{
 	display: none;
 }
-.right-panel .login-area{
+.right-panel .elgg-form-login{
 	float: right;
 }
-.login-area button{
+.elgg-form-login .elgg-button{
 	float: right;
 	color: #e5f4ff;
 	font-size: 18px;
@@ -222,20 +222,22 @@ input[type="email"]::-ms-input-placeholder {
 	margin: 20px 16px 0 0;
 	border: 1px solid #e5f4ff;
 }
-.login-area button:hover{
+.elgg-form-login .elgg-button:hover{
 	color: #4894d0;
 	background: #e5f4ff;
 }
-.login-area button.mobile{
+.elgg-form-login .elgg-button.mobile{
 	display: none;
 }
 
-.login-area .form-row{
+.elgg-form-login .elgg-field,
+.elgg-form-login .elgg-form-footer label,
+.elgg-form-login .elgg-form-footer .elgg-menu-login{
 	width: 215px;
 	margin: 0 10px 0 0;
 	display: inline-block;
 }
-.login-area .form-row .label{
+.elgg-form-login label{
 	padding: 0;
 	display: block;
 	font-size: 14px;
@@ -243,25 +245,36 @@ input[type="email"]::-ms-input-placeholder {
 	margin: 0 0 5px;
 	font-weight: normal;
 	font-family: "calibri";
+	color: #fff;
 }
-.login-area .form-row label{
+.elgg-form-login .elgg-field label{
 	display: block;
 }
-.login-area .form-row a{
+.elgg-form-login a {
 	display: block;
 	color: #e5f4ff;
 	font-size: 12px;
 	font-family: "Arial";
 }
 
-.login-area input[type="email"],
-.login-area input[type="password"]{
+.elgg-form-login input[type="text"],
+.elgg-form-login input[type="password"]{
 	width: 100%;
 	height: 33px;
 	margin: 0 0 4px;
 	padding: 5px 10px;
 	border-radius: 2px;
 	border: 1px solid #2871ab;
+}
+.elgg-form-login .elgg-menu-login {
+	list-style-type: none;
+	padding: 0;
+}
+.elgg-form-login .elgg-menu-item-register {
+	display: none;
+}
+.elgg-form-login .elgg-menu-item-forgotpassword a {
+	color: white;
 }
 .control {
   display: block;
@@ -485,7 +498,7 @@ button.mobile{
 }
 
 .img-holder .text {
-  white-space: normal; 
+  white-space: normal;
   color: white;
   font-size: 18px;
   position: absolute;
@@ -588,7 +601,7 @@ button.mobile{
 /*WE WELCOME SECTION STYLING*/
 
 .welcome{
-	z-index: 99;	
+	z-index: 99;
 	overflow: hidden;
 	padding: 80px 0;
 	position: relative;
@@ -602,7 +615,7 @@ button.mobile{
 	height: 445px;
 	content: "";
 	position: absolute;
-	background: url(../images/img-30.png) no-repeat;	
+	background: url(../images/img-30.png) no-repeat;
 }
 .welcome .heading-holder{
 	font-size: 20px;
@@ -857,7 +870,7 @@ button.mobile{
 	.right-panel .flag-list li{
 		margin: 0 2px;
 	}
-	.login-area .form-row{
+	.elgg-form-login .elgg-field{
 		width: 180px;
 	}
 	.banner .left-box{
@@ -982,12 +995,12 @@ button.mobile{
 }
 
 @media only screen and ( max-width: 767px){
-	.right-panel .login-area{
+	.right-panel .elgg-form-login{
 		float: none;
 		width: 100%;
 		margin: 10px 0 0;
 	}
-	.login-area .form-row .label{
+	.elgg-form-login .elgg-field label{
 		font-size: 14px;
 		margin: 0 0 5px;
 	}
@@ -998,14 +1011,14 @@ button.mobile{
 		right: 15px;
 		top: 34px;
 	}
-	.login-area .form-row{
+	.elgg-form-login .elgg-field{
 		width: 36%;
 	}
-	.login-area input[type="email"],
-	.login-area input[type="password"]{
+	.elgg-form-login input[type="email"],
+	.elgg-form-login input[type="password"]{
 		height: 36px;
 	}
-	.login-area button{
+	.elgg-form-login .elgg-button{
 		padding: 6px 22px;
 		font-size: 16px;
 		margin: 20px 0 0;
@@ -1064,7 +1077,7 @@ button.mobile{
 	.help h2{
 		font-size: 40px;
 	}
-	.login-area{
+	.elgg-form-login{
 		left: 0;
 		right: 0;
 		margin: 0;
@@ -1072,18 +1085,18 @@ button.mobile{
 		padding: 5px 12px;
 		position: absolute;
 	}
-	.login-area.inner{
+	.elgg-form-login.inner{
 		display: block;
 	}
 	.modal-body{
-		overflow: hidden;	
+		overflow: hidden;
 	}
 	.modal-dialog{
 		margin: 10px auto !important;
 		width: 280px !important;
 	}
 	.modal-content{
-		background: #4894d0 !important; 
+		background: #4894d0 !important;
 	}
 	.modal-title{
 		color: #fff;
@@ -1091,18 +1104,18 @@ button.mobile{
 		text-align: center;
 		text-transform: uppercase;
 	}
-	.login-area.inner .form-row{
+	.elgg-form-login.inner .elgg-field{
 		width: 100%;
 		margin: 0 0 10px;
 	}
-	.login-area .form-row label{
+	.elgg-form-login .elgg-field label{
 		margin: 0;
 	}
-	.login-area.inner input[type="email"],
-	.login-area.inner input[type="password"]{
+	.elgg-form-login.inner input[type="email"],
+	.elgg-form-login.inner input[type="password"]{
 		height: 36px;
 	}
-	.login-area.inner button{
+	.elgg-form-login.inner button{
 		display: block;
 		font-size: 18px;
 		padding: 6px 26px;
@@ -1240,7 +1253,7 @@ button.mobile{
 		width: 1px;
 	}
 	.footer-logo{
-		margin: 20px 0;	
+		margin: 20px 0;
 	}
 	#footer p, #footer p a{
 		font-size: 15px;
@@ -1258,19 +1271,19 @@ button.mobile{
 		width: 16px;
 		height: auto;
 	}
-	.login-area button{
+	.elgg-form-login .elgg-button{
 		padding: 4px 10px;
 		font-size: 12px;
 		margin: 20px 0 0;
 	}
-	.right-panel .login-area{
+	.right-panel .elgg-form-login{
 		margin: 0;
 	}
 	.banner h1{
 		margin: 60px 0 20px;
 	}
-	.login-area input[type="email"],
-	.login-area input[type="password"]{
+	.elgg-form-login input[type="email"],
+	.elgg-form-login input[type="password"]{
 		height: 28px;
 	}
 }
