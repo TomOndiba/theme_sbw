@@ -14,6 +14,7 @@ function theme_sbw_init() {
 	elgg_extend_view('page/elements/sidebar', 'sidebar/donate');
 	elgg_extend_view('page/elements/footer', 'sidebar/donate');
 	elgg_extend_view('page/elements/footer', 'copyright');
+	elgg_extend_view('page/elements/sidebar_alt', 'theme_sbw/sidebar_alt_menu');
 
 	elgg_unextend_view('page/elements/sidebar', 'search/header');
 
@@ -36,6 +37,8 @@ function theme_sbw_init() {
 	elgg_register_plugin_hook_handler('entity:cover:sizes', 'user', 'theme_sbw_cover_sizes');
 	elgg_register_plugin_hook_handler('entity:cover:url', 'user', 'theme_sbw_cover_url');
 	elgg_register_plugin_hook_handler('entity:cover:file', 'user', 'theme_sbw_cover_icon_file');
+
+	elgg_register_plugin_hook_handler('layout', 'page', 'theme_sbw_layout');
 
 	elgg_register_plugin_hook_handler('register', 'menu:user_hover', 'theme_sbw_hover_menu');
 
@@ -291,3 +294,19 @@ function theme_sbw_owner_block_menu($hook, $type, $return, $params) {
     return $return;
 }
 
+/**
+ * Override default content layout with three-column layout.
+ *
+ * @param string $hook        'layout'
+ * @param string $type        'page'
+ * @param array  $layout_name Name of the layout
+ * @param array  $params      Page parameters
+ * @return array $menu
+ */
+function theme_sbw_layout($hook, $type, $layout_name, $params) {
+	if ($layout_name == 'content') {
+		return 'two_sidebar';
+	}
+
+	return $layout_name;
+}

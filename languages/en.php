@@ -18,4 +18,6 @@ return array(
 	'cover:remove:fail' => 'Error removing the cover',
 	'cover:upload' => 'Upload an image',
 	'cover:remove:success' => 'Cover image removed',
+
+	'theme_sbw:my_content' => 'My content',
 );
