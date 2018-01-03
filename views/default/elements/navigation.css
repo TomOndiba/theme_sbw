@@ -128,6 +128,7 @@
 .elgg-menu-topbar {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	float: left;
+	z-index: 9000;
 }
 
 .elgg-menu-topbar > li {

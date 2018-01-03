@@ -178,15 +178,19 @@
 	background: white;
 	border: 1px solid #DCDCDC;
 	border-bottom: none;
-	margin: 0;
+	margin: 15px 5px 0 5px;
 	padding: 0 10px;
+	border-radius: 4px 4px 0 0;
+	box-shadow: 4px 0px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .elgg-river-layout .wall-container {
 	background: white;
-	margin: 0 0 20px 0;
 	border: 1px solid #DCDCDC;
 	border-top: none;
 	padding: 20px 10px;
+	margin: 0 5px 15px 5px;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .elgg-river-layout .elgg-menu-filter {
 	margin: 0;
@@ -197,8 +201,9 @@
 .elgg-list-river > li {
 	background: white;
 	border: 1px solid #DCDCDC;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
-	margin: 0 0 15px 0;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.15);
+	margin: 0 5px 15px 5px;
+	border-radius: 4px;
 	padding: 10px;
 }
 .elgg-river-item .elgg-pict {
@@ -371,4 +376,21 @@
 }
 .elgg-tags li.elgg-tag:last-child:after {
 	content: "";
+}
+
+/* ***************************************
+	RESPONSIVE TABS
+*************************************** */
+@media (max-width: 766px) { .elgg-menu-filter, .elgg-tabs { overflow: visible; border: 1px solid #DCDCDC; border-radius: 3px; }
+  .elgg-menu-filter > li, .elgg-tabs > li { flex: 1 1 100%; margin: 0; border: none; display: none; z-index: 1; order: 1; border-radius: 0; }
+  .elgg-menu-filter > li > a, .elgg-tabs > li > a { text-align: left; margin: 1px; }
+  .elgg-menu-filter > li.elgg-state-selected, .elgg-tabs > li.elgg-state-selected { order: 0; display: block; padding-right: 30px; }
+  .elgg-menu-filter > li.elgg-state-selected > a, .elgg-tabs > li.elgg-state-selected > a { top: 0; position: relative; }
+  .elgg-menu-filter > li.elgg-state-selected > a:after, .elgg-tabs > li.elgg-state-selected > a:after { width: 0; height: 0; border-style: solid; border-width: 5px 5px 0 5px; border-color: #666 transparent transparent transparent; content: ""; display: block; position: absolute; right: -30px; top: 0; margin: 12px; }
+  .elgg-menu-filter.elgg-state-active > li, .elgg-tabs.elgg-state-active > li { display: block; }
+  .elgg-menu-filter.elgg-state-active > li:last-of-type, .elgg-tabs.elgg-state-active > li:last-of-type { border-bottom: 0; }
+  .elgg-menu-filter.elgg-state-active > li.elgg-state-selected, .elgg-tabs.elgg-state-active > li.elgg-state-selected { padding-right: 0; }
+  .elgg-menu-filter.elgg-state-active > li.elgg-state-selected > a:after, .elgg-tabs.elgg-state-active > li.elgg-state-selected > a:after { border: none; }
+  .elgg-tabs-nav { height: 32px; overflow: visible;
+  }
 }
